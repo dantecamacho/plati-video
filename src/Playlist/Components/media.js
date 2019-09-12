@@ -1,8 +1,8 @@
-import React from 'react'
+import React,{PureComponent} from 'react'
 import './media.css'
 import PropTypes from 'prop-types'
 
-class Media extends React.Component{
+class Media extends PureComponent{
     state={
         author:'Dante Camacho'
     }
@@ -14,15 +14,15 @@ class Media extends React.Component{
     //          author:props.author
     //      }
     //  }
-    handleClick=(event)=>{
-        // console.log(this.props.image)
-        this.setState({
-            author:'Jaen Gonzalez'
-        })
-    }
+    // handleClick=(event)=>{
+    //     // console.log(this.props.image)
+    //     // this.setState({
+    //     //     author:'Jaen Gonzalez'
+    //     // })
+    // }
     render(){
         return (
-        <div className="Media" onClick={this.handleClick}>
+        <div className="Media" onClick={this.props.handleClick}>
             <div className="Media-cover">
                 <img
                 className="Media-image"
